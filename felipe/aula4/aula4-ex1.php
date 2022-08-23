@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,9 +21,9 @@
     <hr>
     <form action = "aula4-ex1.php" method = "get">
         <input type = "text" name = "nome" placeholder = "Nome" required>
-        <input type = "number" name = "nota1" placeholder = "Nota 1" required>
-        <input type = "number" name = "nota2" placeholder = "Nota 2" required>
-        <input type = "number" name = "nota3" placeholder = "Nota 3" required>
+        <input type = "text" name = "nota1" placeholder = "Nota 1" required>
+        <input type = "text" name = "nota2" placeholder = "Nota 2" required>
+        <input type = "text" name = "nota3" placeholder = "Nota 3" required>
         <button type = "submit" name = "enviar" value = "enviar">Calcular a média</button>
     </form>
     <br>
@@ -32,8 +32,19 @@
     $nota1 = $_GET['nota1'];
     $nota2 = $_GET['nota2'];
     $nota3 = $_GET['nota3'];
-    $media = ($nota1+$nota2+$nota3)/3;
+
+    if (!is_numeric($nota1) || !is_numeric($nota2) || !is_numeric($nota3)) {
+        echo "O campo <strong>Nota</strong> precisa ser preenchido com números <br>"; 
+    }
+
+    if (is_numeric($nome)) {
+        echo "O campo Nome precisa ser preenchido com texto <br>"; 
+    }
+
+    if (is_numeric($nota1) AND is_numeric($nota2) AND is_numeric($nota3) AND !is_numeric($nome)) {
+        $media = ($nota1+$nota2+$nota3)/3;
+        echo "$nome tem média $media";
+    }
     ?>
-    <?php echo "$nome tem média $media"; ?>
 </body>
 </html>

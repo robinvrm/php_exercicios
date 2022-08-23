@@ -20,48 +20,13 @@
             </ul>
         </small>
         <hr>
-        <form action = "aula4-ex3.php" method = "post">
-            <input type = "email" name = "email" id = "email" placeholder = "E-mail" required>
+        <form action = "aula4-ex3-inicio.php" method = "post">
+            <input type = "text" name = "login" id = "login" placeholder = "login" required>
             <input type = "password" name = "senha" id = "senha" placeholder = "Senha" required>
             <button type = "submit" class = "botao" id = "botao" onclick = "entrar()"><strong>Entrar</strong></button>
         </form>
         <br>
     </div>
     <div id = "home"></div>
-    <?php
-    $login = $_POST['email'];
-    $senha = $_POST['senha'];
-    
-    function entrar() 
-    {
-        if ($login == "robin" && $senha == "desenv") {
-            $none = document->querySelector('#header');
-
-            document.querySelector('#home').innerHTML = 'Logado com sucesso';
-        }
-    }
-//     .style.display = 'none';
-
-//     ideia 1
-//     $sumir = '<style>
-// #conteudo {
-//     display: none !important;
-// }
-// </style>';
-
-// $html = $html . $sumir;
-// echo $html;
-
-// ideia 2
-// $html = '... Conteudo do HTML ...';
-
-// $doc = new DOMDocument();
-// $doc->loadHTML($html);
-
-// // "conteudo" é o ID, não adicione o #
-// $tagConteudo = $doc->getElementById('conteudo');
-
-// $tagConteudo->setAttribute('style', 'display: none;');
-    ?>
 </body>
 </html>
