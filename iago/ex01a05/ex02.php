@@ -39,13 +39,6 @@
     } elseif ($resultado == 10) {
         echo " O resultado é $resultado, aprovado com distinção";
     }
-
-
-
-
-
-
-
     ?>
 
     <!-- // switch ($i) {

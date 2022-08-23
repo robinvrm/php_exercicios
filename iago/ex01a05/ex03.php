@@ -20,16 +20,16 @@
 
     <?php
 
-    // $numeros = $_POST('n1', 'n2', 'n3');
-    $numeros = ['4', '2', '6'];
-    
-    sort($numeros);
 
-    foreach ($numeros as $num) {
-        echo "$num<br>";
-    }
+    $numero1 = $_POST['n1'];
+    $numero2 = $_POST['n2'];
+    $numero3 = $_POST['n3'];
+    $array = [];
 
+    array_push($array, $numero1, $numero2, $numero3);
+    sort($array);
 
+    echo end($array);
     ?>
 
 
