@@ -18,35 +18,19 @@
 
     <h1>Formulário com tipo de pagamento</h1>
 
-    <form action="./ex02.php" method="post">
+    <form action="./ex02-novatela.php" method="post">
         <input type="text" name="nome" placeholder="nome">
         <input type="email" name="email" placeholder="e-mail">
         <input type="birthday" name="datan" placeholder="data de nascimento">
         <select name="formapgto" id="pgto">
-            <option value=""></option>
+            <option value="">Escolha</option>
             <option value="pix">pix</option>
             <option value="cartao">cartão de crédito</option>
             <option value="boleto">boleto</option>
         </select>
         <button type="submit" name="submit" Placeholder="Enter">Enviar</button>
     </form>
-    <?php
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $datan = $_POST['datan'];
-    $formapgto = $_POST['formapgto'];
 
-    /** falta validar campos **/
-
-
-    echo "$nome";
-    echo "<br/>";
-    echo "$email";
-    echo "<br/>";
-    echo "$datan";
-    echo "<br/>";
-    echo "$formapgto";
-    ?>
 
 </body>
 
