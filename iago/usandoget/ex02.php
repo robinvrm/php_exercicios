@@ -23,12 +23,22 @@
     </form>
 
     <?php
-
+    //** Verificar porque não está dando opção de colocar número fracionado**/
 
     $numero1 = $_GET['n1'];
     $numero2 = $_GET['n2'];
     $numero3 = $_GET['n3'];
     $array = [];
+
+    if (!is_numeric($numero1)) {
+        die("inserir numero em todos os campos");
+    }
+    if (!is_numeric($numero2)) {
+        die("inserir numero em todos os campos");
+    }
+    if (!is_numeric($numero3)) {
+        die("inserir numero em todos os campos");
+    }
 
     array_push($array, $numero1, $numero2, $numero3);
     sort($array);
