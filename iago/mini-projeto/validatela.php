@@ -9,11 +9,10 @@ $senha = $_POST["senha"];
 //     die("Preencha campo de login e senha válido");
 // }
 
-if ($login === 'Robin' && $senha === 'desenv') {
+if ($login === 'iago' && $senha === '123456') {
     echo "logado com sucesso";
     // echo "<a href=teste.php><a/>";
-} elseif ($login != 'Robin' || $senha != 'desenv') {
+} elseif ($login != 'iago' || $senha != '123456') {
     echo "Preencha campo de login e senha válido";
     die();
 }
-?>
