@@ -23,7 +23,7 @@
         <form action = "aula4-ex3-inicio.php" method = "post">
             <input type = "text" name = "login" id = "login" placeholder = "login" required>
             <input type = "password" name = "senha" id = "senha" placeholder = "Senha" required>
-            <button type = "submit" class = "botao" id = "botao" onclick = "entrar()"><strong>Entrar</strong></button>
+            <button type = "submit" class = "botao" id = "botao"><strong>Entrar</strong></button>
         </form>
         <br>
     </div>

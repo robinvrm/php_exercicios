@@ -32,6 +32,10 @@
     $num3 = $_GET['num3'];
     $array = [];
 
+    if (!is_numeric($num1) || !is_numeric($num2) || !is_numeric($num3)) {
+        echo "O campo <strong>Nota</strong> precisa ser preenchido com números <br>"; 
+    }
+
     array_push($array, $num1, $num2, $num3);
     sort($array);
 
