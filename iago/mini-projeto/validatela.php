@@ -10,9 +10,13 @@ $senha = $_POST["senha"];
 // }
 
 if ($login === 'iago' && $senha === '123456') {
-    echo "logado com sucesso";
-    // echo "<a href=teste.php><a/>";
+    echo "Logado com sucesso! Clic em OK para seguir ao Menu!";
+    echo "<a href=teste.php><a/>";
 } elseif ($login != 'iago' || $senha != '123456') {
     echo "Preencha campo de login e senha válido";
     die();
 }
+?>
+<form action="./menu.php" method="post">
+    <button type="submit">OK</button>
+</form>
