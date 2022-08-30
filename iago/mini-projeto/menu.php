@@ -6,6 +6,7 @@
     }
 </style>
 
+
 <body>
     <h1>Cardápio de Lanches</h1>
     <table>
@@ -48,35 +49,12 @@
     </table>
     <br>
 
-    <form action="./menu.php" method="post">
-        <input type="number" name="codigo" placeholder="inserir codigo">
+    <form action="./calcular.php" method="post">
+        <input type="text" name="codigo" placeholder="inserir codigo">
 
         <button type="submit">Inserir</button>
-
-    </form>
-
-    <form action="./inserir.php" method="post">
-        <button type="concluir">Concluir pedido</button>
-    </form>
 </body>
-
-<?php
-$codigo = $_POST['codigo'];
-// $codigo = [];
-
-
-if ($codigo == 100) {
-    echo "Cachorro Quente R$12,70";
-} elseif ($codigo == 101) {
-    echo "Bauru Simples R$4,00";
-} elseif ($codigo == 102) {
-    echo "Bauru com Ovo R$4,60";
-} elseif ($codigo == 103) {
-    echo "Hambúrguer R$15,00";
-} elseif ($codigo == 104) {
-    echo "Cheeseburguer R$13,50";
-} elseif ($codigo == 05) {
-    echo "Refrigerante R$4,50";
-}
-
-?>
+<br>
+<br>
+<br>
+<?php include 'calcular.php'; ?>
