@@ -6,18 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Projeto</title>
+    <?php include 'includehead.php'; ?>
+    <style>
+        h1 {
+            text-align: center;
+            padding-top: 5%;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        button {
+            height: 28px;
+            width: 52px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        input {
+            border: 1px solid black;
+            border-radius: 6px;
+            height: 25px;
+            width: 180px;
+        }
+    </style>
 </head>
 
-<body>
-    <h1>Formulário com login e senha</h1>
-    <form action="./validatela.php" method="post">
-        <input type="password" name="login" placeholder="login">
-        <input type="password" name="senha" placeholder="senha">
-        <button type="login" onclick="logar(); return false" Placeholder="Enter">Enter</button>
-    </form>
-
-
-</body>
+<h1>Entre com seu login e senha</h1>
+<form action="./validatela.php" method="post">
+    <input type="password" name="login" placeholder="login">
+    <input type="password" name="senha" placeholder="senha">
+    <button type="login" onclick="logar(); return false" Placeholder="Enter">Enter</button>
+</form>
+<?php include 'includefooter.php'; ?>
 
 </html>
 

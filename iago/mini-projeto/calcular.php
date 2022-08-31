@@ -15,28 +15,27 @@ foreach ($arrayLanches as $key => $value) {
         echo "<br>" . $value2;
         if ($value2 == 100) {
             echo " - Cachorro Quente R$12,70";
-            $preçoitem = 12.70;
+            $precoitem = 12.70;
         } elseif ($value2 == 101) {
             echo " - Bauru Simples R$4,00";
-            $preçoitem = 4.00;
+            $precoitem = 4.00;
         } elseif ($value2 == 102) {
             echo " - Bauru com Ovo R$4,60";
-            $preçoitem = 4.60;
+            $precoitem = 4.60;
         } elseif ($value2 == 103) {
             echo " - Hambúrguer R$15,00";
-            $preçoitem = 12.70;
+            $precoitem = 12.70;
         } elseif ($value2 == 104) {
             echo " - Cheeseburguer R$13,50";
-            $preçoitem = 13.50;
+            $precoitem = 13.50;
         } elseif ($value2 == 05) {
             echo " - Refrigerante R$4,50";
-            $preçoitem = 4.50;
+            $precoitem = 4.50;
         }
-        $soma = $soma + $preçoitem;
-        echo "$soma";
+        $soma = $soma + $precoitem;
     }
 }
-
+echo "<br><br> O total da compra é $soma";
 
 ?>
 

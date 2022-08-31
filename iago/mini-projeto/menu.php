@@ -54,7 +54,4 @@
 
         <button type="submit">Inserir</button>
 </body>
-<br>
-<br>
-<br>
-<?php include 'calcular.php'; ?>
+
