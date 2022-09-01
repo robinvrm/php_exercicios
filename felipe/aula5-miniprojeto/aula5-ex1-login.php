@@ -13,6 +13,5 @@ if ($login == "felipe" && $senha == "felipe123") {
 } else {
     echo "<h1 style = 'color:red'>Usuário e/ou senha incorretos!</h1>";
     echo "<script type='text/JavaScript'> setTimeout(function () { window.location.href = 'aula5-ex1.php'; }, 3000); </script>";
-
 }
 ?>
