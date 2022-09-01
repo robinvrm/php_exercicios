@@ -60,6 +60,4 @@
     </form>
     <?php include 'includefooter.php'; ?>
 </body>
-
-
 </html>
