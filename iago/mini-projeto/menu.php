@@ -1,3 +1,12 @@
+<?php
+// session_start();
+// echo $_SESSION['login'];
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 

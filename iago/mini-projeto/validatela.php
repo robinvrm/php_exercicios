@@ -1,3 +1,14 @@
+<?php
+// SESSION_START();
+// $_SESSION['nome'] = 'iago';
+// $_SESSION['idade'] = '36';
+// $_SESSION['login'] = $_POST["login"];
+// $_SESSION['senha'] = $_POST["senha"];
+
+// echo $_SESSION['login'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,8 +49,7 @@
 
     <?php
 
-    $login = $_POST["login"];
-    $senha = $_POST["senha"];
+
     // if (!is_string($login)) {
     //     die("Preencha campo de login e senha válido");
     // }
@@ -47,10 +57,10 @@
     //     die("Preencha campo de login e senha válido");
     // }
 
-    if ($login === 'iago' && $senha === '123456') {
+    if ($_SESSION['login'] == 'iago' && $_SESSION['senha'] == '123456') {
         echo "<div>Logado com sucesso! Clic em OK para seguir ao Menu!</div>";
-        echo "<a href=teste.php><a/>";
-    } elseif ($login != 'iago' || $senha != '123456') {
+        // echo "<a href=teste.php><a/>";
+    } elseif ($_SESSION['login'] != 'iago' || $_SESSION['senha'] != '123456') {
         echo "<p>Preencha campo de login e senha válido</p>";
         die();
     }
@@ -60,4 +70,5 @@
     </form>
     <?php include 'includefooter.php'; ?>
 </body>
+
 </html>
