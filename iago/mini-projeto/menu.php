@@ -51,9 +51,11 @@
 <body>
     <h1>Menu de Lanches</h1>
     <form action="./calcular.php" method="post">
-        <p>Insira os códigos dos itens escolhidos <br>
-            um após o outro com vircula, ex: <br>
-            (100,05,104)</p>
+        <p>Insira os códigos dos itens escolhidos um após o outro com vircula, ex: (100,05,104).<br>
+            Repita o código, quando quiser mais de um item do mesmo produto, ex: dois hamburguer e um refrigerante<br>
+            (103,103,05).
+
+        </p>
         <input type="text" name="codigo" placeholder="inserir codigo">
         <button type="submit">Inserir</button>
     </form>

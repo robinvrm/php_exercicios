@@ -12,6 +12,10 @@
     div {
         text-align: center;
     }
+
+    p {
+        text-align: center;
+    }
 </style>
 
 <body>
@@ -19,7 +23,9 @@
     $codigo = $_POST['codigo'];
     $arrayLanches['codigo'] = explode(",", $codigo);
     // print_r($arrayLanches);
+
     $soma = 0;
+
     foreach ($arrayLanches as $key => $value) {
         foreach ($value as $key => $value2) {
             echo "<br><div>" . $value2;
@@ -34,13 +40,19 @@
                 $precoitem = 4.60;
             } elseif ($value2 == 103) {
                 echo "<div> - Hambúrguer R$15,00<br>";
-                $precoitem = 12.70;
+                $precoitem = 15.00;
             } elseif ($value2 == 104) {
                 echo "<div> - Cheeseburguer R$13,50<br>";
                 $precoitem = 13.50;
             } elseif ($value2 == 05) {
                 echo "<div> - Refrigerante R$4,50<br>";
                 $precoitem = 4.50;
+            } elseif ($value2 != 100 || $value2 != 101 || $value2 != 102 || $value2 != 103 || $value2 != 104 || $value2 != 05) {
+                echo " Voce selecionou código(s) inexistente(s) no Menú no momento!</br>
+                Por gentileza, volte a tela de menu, exclua o(s) código(s) inválido(s)</br>
+                e execute sua escolha novamente!</br>
+                Se você preferir, pode solicitar ajuda de um de nossos atendentes!";
+                die();
             }
             $soma = $soma + $precoitem;
         }

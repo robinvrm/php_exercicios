@@ -1,11 +1,11 @@
 <?php
-// SESSION_START();
+SESSION_START();
 // $_SESSION['nome'] = 'iago';
 // $_SESSION['idade'] = '36';
-// $_SESSION['login'] = $_POST["login"];
-// $_SESSION['senha'] = $_POST["senha"];
+$_SESSION['login'] = $_POST["login"];
+$_SESSION['senha'] = $_POST["senha"];
 
-// echo $_SESSION['login'];
+echo $_SESSION['login'];
 
 ?>
 
