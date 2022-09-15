@@ -64,7 +64,7 @@ No final da compra, deverá aparecer o saldo gerado na compra atual. -->
         </tr>
     </table>
     <br><br>
-    <form action="./ex07.php" method="post">
+    <form action="./ex06-02.php" method="post">
         <input type="text" placeholder="codigo pizza" name="pizza">
         <button type="submit" name="pedir">Pedir</button>
     </form>
