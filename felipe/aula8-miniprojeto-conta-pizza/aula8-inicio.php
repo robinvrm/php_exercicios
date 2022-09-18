@@ -11,6 +11,7 @@
 
 <body>
     <h1>Cardápio de pizza</h1>
+    <hr>
     <h3>Escolha as suas pizzas abaixo!</h3>
 
     <?php foreach ($saboresPizzas as $pizza) { ?>
@@ -25,15 +26,20 @@
     <hr>
 
     <h2>Adicionar ao carrinho:</h2>
-    <p>Selecione um sabor e adicione ao carrinho</p>
-    <?php foreach ($saboresPizzas as $pizza) { ?>
-        <form action="aula8-carrinho.php" method="GET">
-            <input type="checkbox" name="sabor" value="<?php echo $pizza['produto']; ?>">
+    <p>Selecione <strong>um sabor</strong> e adicione ao carrinho</p>
+    <form action="aula8-carrinho.php" method="GET">
+        <?php foreach ($saboresPizzas as $pizza) { ?>
+            <input type="radio" name="sabor" value="<?php echo $pizza['produto']; ?>">
             <label for="sabor"><?php echo $pizza['produto']; ?></label><br>
-            <input type="number" name="quantidade" value="quantidade">
-            <button type="submit" name="enviar" value="enviar">Adicionar</button>
+        <?php } ?>
+        <input type="number" name="quantidade" value="quantidade"><br>
+        <span>Deseja partipar do programa de pontos?</span>
+        <input type="radio" name="fidelizacao" value="sim">
+        <label for="sim">Sim</label>
+        <input type="radio" name="fidelizacao" value="nao">
+        <label for="nao">Não</label><br>
+        <button type="submit" name="enviar" value="enviar">Adicionar</button>
         </form>
-    <?php } ?>
     <br>
 </body>
 
