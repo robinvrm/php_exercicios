@@ -1,6 +1,7 @@
 <?php
 
 // funções nativas
+
 echo "Recursiva <br><br>";
 
 function dividir($numero)
@@ -18,17 +19,21 @@ echo "<hr>";
 
 
 // função número absoluto (num positivo)
+
 echo "<br> Absoluto <br>";
+
+$num = 10;
 
 echo $num . "<br>";
 echo abs($num);
-echo "<hr>"
+echo "<hr>";
 
 //---------------------------------------------------------------
-// função número absoluto (num positivo)
+//função número absoluto (num positivo)
+
 echo "<br><br> Pi <br>";
 
-echo pi ();
+echo pi();
 echo "<hr>";
 
 //---------------------------------------------------------------
@@ -42,7 +47,7 @@ echo $n . "<br>";
 
 echo floor($n);
 
-echo "<br><br> arredondar um para cima <br>";
+echo "<br><br> Arredondar um para cima <br>";
 $n2 = 3.3;
 echo "<br>" . $n2 . "<br>";
 
@@ -58,12 +63,13 @@ echo "<br><br> Arredondar casas decimais <br>";
 $n4 = 3.653647;
 echo "<br>" . $n4 . "<br>";
 
-echo round ($n4, 2 );
+echo round($n4, 2);
 echo "<br>";
-
+echo "<hr>";
 //----------------------------------------------------------------
 
 // função num aleatório
+
 echo "<br><br> Número aleatório <br>";
 
 $randomico = rand(2, 100);
@@ -73,16 +79,17 @@ echo "<hr>";
 
 //----------------------------------------------------------------
 
-// função num menor e maior do array
+//função num menor e maior do array
+
 echo "<br><br> Número maior <br>";
 
-$nMaior = [3,6,8,9,10,15,25];
+$nMaior = [3, 6, 8, 9, 10, 15, 25];
 
 echo max($nMaior);
 
 echo "<br><br> Número num menor <br>";
 
-$nMenor = [2,3,6,1,3,6,4,7];
+$nMenor = [2, 3, 6, 1, 3, 6, 4, 7];
 
 echo min($nMenor);
 echo "<hr>";
@@ -90,21 +97,22 @@ echo "<hr>";
 //----------------------------------------------------------------
 
 //função retirar espaços
+
 echo "<br><br> Manipulação de string <br>";
 echo "<br> Retirar espaços <br>";
 
 $nomeComEspaço = "   Rombinson - Machado   ";
 
-echo "teste<br>" . $nomeCompletoEspaço;
+echo "teste<br>" . $nomeComEspaço;
 
-$nomeSemEspaço = trim($nomeComEpaço);
+$nomeSemEspaço = trim($nomeComEspaço);
 $nomeSemEspaçoFinal = rtrim($nomeComEspaço);
 $nomeSemEspaçoInicio = ltrim($nomeComEspaço);
 // echo "<br>" . $nomeSemEspaço;
 echo "<br> com espaço " . strlen($nomeComEspaço);
 echo "<br> sem espaço " . strlen($nomeSemEspaço);
-echo "<br> sem espaço Final" . strlen($nomeSemEspaçoFinal);
-echo "<br> sem espaço Inicio" . strlen($nomeSemEspaçoInicio);
+echo "<br> sem espaço Final " . strlen($nomeSemEspaçoFinal);
+echo "<br> sem espaço Inicio " . strlen($nomeSemEspaçoInicio);
 echo "<hr>";
 
 //----------------------------------------------------------------
@@ -112,6 +120,7 @@ echo "<hr>";
 //função lower/upper
 
 echo "<br><br>LOWER case";
+$nome1 = "robinson machado";
 echo "<br>" . strtolower($nome1);
 echo "<br><br>UPPER case";
 $nome1 = "robinson machado";
@@ -126,6 +135,7 @@ echo "<hr>";
 
 //----------------------------------------------------------------
 // função recuperar alguns caracteres
+
 echo "<br><br> Escolher alguns strings <br>";
 
 $nome2 = "Tiepermann";
@@ -138,11 +148,12 @@ echo "<hr>";
 //----------------------------------------------------------------
 
 //função recuperar alguns caracteres
+
 echo "<br><br> retorna a posição da strin encontrada <br>";
 
 $nome2 = "Tiepperman";
 
-echo $posiçao = strpos($nome2,'p');
+echo $posiçao = strpos($nome2, 'm');
 echo "<hr>";
 
 //----------------------------------------------------------------
@@ -150,7 +161,7 @@ echo "<hr>";
 echo "<br><br> Transformar String em um Array <br>";
 
 echo $nomeCompleto = "Robinson Vicente Rondon Machado <br>";
-$nomeArray = explode("", $nomeCompleto);
+$nomeArray = explode(" ", $nomeCompleto);
 
 print_r($nomeArray);
 echo "<hr>";
@@ -161,8 +172,9 @@ echo "<br><br> Formatar números <br>";
 
 $numeroFormatar = 2569.555;
 echo "<br>" . $numeroFormatar;
-echo "<br>" . number_format($numeroFormatar, 2, ',','.');
+echo "<br>" . number_format($numeroFormatar, 2, ',', '.');
 echo "<br>";
+echo "<hr>";
 
 
 //----------------------------------------------------------------
@@ -178,10 +190,10 @@ echo "<hr>";
 
 echo "<br><br> Diferença entre os arrays <br>";
 
-$listaAlunos = ["Robinson", "Edson", "Rodrigo", "Odonto","Lions"];
-$alunosAprovados = ["Robson", "Edson"];
+$listaAlunos = ["Robinson", "Edson", "Rodrigo", "Odonto", "Lions"];
+$alunosAprovados = ["Robinson", "Edson"];
 
-$reprovados = array_diff($listasAlunos, $alunosAprovados);
+$reprovados = array_diff($listaAlunos, $alunosAprovados);
 
 print_r($reprovados);
 echo "<hr>";
@@ -190,11 +202,12 @@ echo "<hr>";
 
 echo "<br><br> Filtrar algo no array <br>";
 
-// deve conter true or false
-$numArray = [1,112,25,36,85];
+//deve conter true or false
 
-$filtrados = array_filter($numArray, function ($item){
-    if ($item > 125){
+$numArray = [1, 112, 25, 36, 85];
+
+$filtrados = array_filter($numArray, function ($item) {
+    if ($item > 36) {
         return true;
     } else {
         return false;
@@ -205,4 +218,3 @@ print_r($filtrados);
 echo "<hr>";
 
 //----------------------------------------------------------------
-
