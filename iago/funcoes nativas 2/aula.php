@@ -218,3 +218,196 @@ print_r($filtrados);
 echo "<hr>";
 
 //----------------------------------------------------------------
+
+
+// Alateração do Array
+
+echo "<hr>";
+
+//----------------------------------------------------------------
+
+echo "<br><br> Remove o ultimo item do array <br>";
+
+$numArray = [1, 112, 25, 36, 85];
+
+array_pop($numArray);
+
+print_r($numArray);
+echo "<hr>";
+
+//----------------------------------------------------------------
+
+echo "<br><br> Remove o primeiro item do array <br>";
+
+$numArray = [1, 112, 25, 36, 85];
+
+array_shift($numArray);
+
+print_r($numArray);
+echo "<hr>";
+
+//----------------------------------------------------------------
+
+echo "<br><br> Buscar algo no array <br>";
+
+$numArray = [1, 112, 25, 36, 85];
+
+if (in_array(112, $numArray)) {
+    echo "tem";
+} else {
+    echo "Não tem";
+}
+echo "<hr>";
+//----------------------------------------------------------------
+
+echo "<br><br> Buscar algo no array se tiver retorna a posição <br>";
+
+$numArray = [1, 112, 25, 36, 85];
+
+$pos = array_search(36, $numArray);
+
+echo $pos;
+echo "<hr>";
+
+//----------------------------------------------------------------
+
+echo "<br><br> Ordenação em ordem crescente <br>";
+
+$numArray = [1, 112, 25, 36, 85];
+
+sort($numArray);
+
+echo "<hr>";
+
+//----------------------------------------------------------------
+
+echo "<br><br> Ordenação em ordem decrescente <br>";
+
+$numArray = [1, 112, 25, 36, 85];
+
+rsort($numArray);
+
+print_r($numArray);
+echo "<hr>";
+
+//----------------------------------------------------------------
+
+echo "<br><br> Ordenação em ordem crescente mantendo a chave <br>";
+
+$numArray3 = [1, 112, 90, 25, 36, 85];
+
+asort($numArray3);
+
+print_r($numArray3);
+echo "<hr>";
+
+//----------------------------------------------------------------
+
+echo "<br><br> Ordenação em ordem decrescente mantendo a chave <br>";
+
+$numArray3 = [1, 112, 90, 25, 36, 85];
+
+arsort($numArray3);
+
+print_r($numArray3);
+echo "<hr>";
+
+//----------------------------------------------------------------
+
+echo "<br><br> Destruindo um array e montando uma string <br>";
+
+$arrayNomeCompleto = ["Edson", "Luz", "Tiepermann", "Junior"];
+
+print_r($arrayNomeCompleto);
+
+$string = implode(" ", $arrayNomeCopleto);
+
+echo "<br><br> String montada: $string";
+echo "<hr>";
+
+//----------------------------------------------------------------
+
+echo '<br> Array Map<br>';
+function functionArrayMap($item)
+{
+    if ($item === "Edson") {
+        return "$item} - Professor da tarde. Chute no S***";
+    } elseif ($item === "Robinson") {
+        return "{$item} - Professor da Noite. Quebrou a Caneca";
+    } elseif ($item === "Felipe") {
+        return "{$item} - Aluno da Noite.";
+    } elseif ($item === "Leonardo") {
+        return "{$item} - Aluno da tarde, infiltrado na noite.";
+    }
+}
+
+$arrayParaMapear = array("Edson", "Robinson", "Felipe", "Leonardo");
+echo "<pre>";
+print_r(array_map("functionArrayMap", $arrayParaMapear));
+echo "</pre>";
+
+//----------------------------------------------------------------
+
+echo '<br>Arrays<br>';
+
+$filmes = [
+    [
+        'titulo' => 'Vingadores: Ultimato',
+        'imdb' => 8.4,
+        'faturamento_us' => 858300000,
+        'faturamento_br' => 85660000
+    ],
+    [
+        'titulo' => 'Avatar',
+        'imdb' => 7.8,
+        'faturamento_us' => 760500000,
+        'faturamento_br' => 58210000
+    ],
+    [
+        'titulo' => 'Titanic',
+        'imdb' => 7.8,
+        'faturamento_us' => 6593600000,
+        'faturamento_br' => 70460000
+    ],
+];
+
+//array_map
+
+//  A função array_map tem como objetivo percorrer todo o array e mapear cada um dos itens, proessando-os
+//  com o que é pedido, e gerando um novo array com os novos valores.
+
+// vamos supor que o valor total das arrecadações são valores brutos.
+// e que nós vamos descontar os impostos para mostrar o valor líquido.
+// Vamos usar os valores fictícios de 16% para o Brasil e 6% para os Estados Unidos.
+
+echo 'Array map';
+
+$filmesDepoisDosImpostos = array_map(function ($filme) {
+    $filme['faturamento_us'] -= $filme['faturamento_us'] * 0.06;
+    $filme['faturamento_br'] -= $filme['faturamento_br'] * 0.16;
+    return $filme;
+}, $filmes);
+echo 'teste<br>';
+echo '<pre>';
+print_r($filmesDepoisDosImpostos);
+echo "</pre>";
+echo '<hr>';
+
+//array_filter
+/**
+ * A função array_filter tem como objetivos filtrar os itens do array que atendam à uma condição
+ * estipulada dentro da função, e gerando um novo array apenas com os itens filtrados.
+ */
+echo 'array filter';
+$filmesNotaMenorQueOito = array_filter($filmes, function ($filme) {
+    return $filme['imdb'] < 8;
+});
+echo "<pre>";
+print_r($filmesNotaMenorQueOito);
+echo "</pre>";
+echo "<hr>";
+
+//array_reduce
+/**
+ * A função array_reduce tem como objetivo reduzir o array a um único valor
+ */
