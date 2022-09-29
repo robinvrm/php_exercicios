@@ -8,7 +8,6 @@
         "statusBar.background": "#cc3100",
         "statusBarItem.hoverBackground": "#ff3d00",
         "statusBarItem.remoteBackground": "#cc3100",
-        "tab.activeBorder": "#ff3d00",
         "activityBarBadge.background": "#006017",
         "activityBarBadge.foreground": "#e7e7e7",
         "activityBar.foreground": "#e7e7e7",

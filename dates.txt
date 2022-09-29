@@ -1,0 +1,91 @@
+<?php
+//data atual
+echo date("d-m-Y");
+echo "<BR>";
+echo date("now");
+
+echo '<hr>';
+echo "Hoje e dia: " . date("Y/m/d") . "<br>";
+
+echo "Hoje e dia:" . date("Y.m.d") . "<br>";
+
+echo "Hoje e dia:" . date("Y-m-d") . "<br>";
+
+echo "Hoje e dia: " . date("l") . '<br>';
+
+/**
+ * d ? Representa o dia do m s; dois d gitos com zeros   esquerda (01 ou 31)
+ * D ? Representa o dia da semana no texto como uma abreviatura (seg a dom)
+ * m ? Representa o m s em n meros com zeros   esquerda (01 ou 12)
+ * M ? Representa o m s no texto, abreviado (janeiro a dezembro)
+ * y ? Representa o ano em dois d gitos (08 ou 14)
+ * Y ? Representa o ano em quatro d gitos (2008 ou 2014)
+ */
+
+
+/**
+ * h ? Representa a hora no formato de 12 horas com zeros   esquerda (01 a 12)
+ * H ? Representa a hora no formato de 24 horas com zeros   esquerda (00 a 23)
+ * i ? Representa os minutos com zeros   esquerda (00 a 59)
+ * s ? Representa os segundos com zeros   esquerda (00 a 59)
+ * A ? Representa meridiem (AM ou PM)
+ * s ? Representa os segundos com zeros   esquerda (00 a 59)
+ * s ? Representa os segundos com zeros   esquerda (00 a 5hr
+ * s ? Representa os segundos com zeros   esquerda (00 a 59)
+ */
+echo '<hr>';
+echo '<hr>';
+echo '<hr>';
+echo date("h:i:s") . "<br>";
+echo date("F d, y h:i:s A") . "<br>";
+echo date("h:i a");
+
+
+echo '<hr>';
+echo date('Y');
+echo '<br>';
+echo date('y');
+echo '<br>';
+echo date('y-m-d');
+echo '<br>';
+echo date('Y-m-d');
+echo '<br>';
+echo date('Y-M-d');
+echo '<br>';
+echo date('y-M-D');
+echo '<br>';
+echo '<hr>';
+echo date('D');
+echo '<br>';
+echo date('l');
+echo '<br>';
+echo '<br>';
+echo date('g:i:s a');
+echo '<br>';
+echo date('h:i:s A');
+echo '<br>';
+echo date("l") . "<br>";
+
+echo date("l jS \of F Y h:i:s A");
+echo '<br>';
+echo '<hr>';
+echo strtotime("now"), "\n";
+echo '<br>';
+$firstDate = "2022-09-01";
+$secondDate = "2022-09-15";
+echo 'primeiro - ' . strtotime($firstDate);
+echo '<br>';
+echo 'último - ' . strtotime($secondDate);
+echo '<br>';
+$dateDifference = (strtotime($secondDate) - strtotime($firstDate));
+echo date('d', $dateDifference);
+// echo $dateDifference;
+echo '<hr>';
+echo '<hr>';
+echo '<hr>';
+echo '<hr>';
+$inicio = strtotime('2022-02-25'); // transformando em time
+$fim = strtotime('2022-05-30'); // transformando em time
+echo $intervalo = $fim - $inicio;
+echo '<hr>';
+echo $dias = floor($intervalo / (60 * 60 * 24));
