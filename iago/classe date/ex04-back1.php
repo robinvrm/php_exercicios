@@ -148,10 +148,15 @@ echo "Insira abaixo a forma de pagamento, seu nome completo, e o endereço compl
     <select name="formapgto" id="pgto">
         <option value="">Escolha</option>
         <option value="pix">pix</option>
-        <option value="cartao">cartão de crédito</option>
+        <option value="cartao">cartao</option>
         <option value="boleto">boleto</option>
     </select>
+    <input type="text" name="totalprodutos" value="<?php echo $totalprodutos; ?>">
+    <input type="text" name="nomelivro" value="<?php ?>">
+    <!-- <input type="text" name="total" value="<?php
+                                                // echo $codigo100, $codigo200; 
+                                                ?>"> -->
     <input type="text" placeholder="nome completo" name="nome">
-    <input type="text" placeholder="endereço completo" name="região">
+    <input type="text" placeholder="endereço completo" name="entrega">
     <button type="submit" name="submit">Enviar</button>
 </form>
