@@ -74,18 +74,58 @@ pix conta a partir do momento da compra. -->
 </table>
 
 <br>
-<form action="" method="post">
+<form action="./ex04-back1.php" method="post">
 
     <div>
-        <label for="">100 -HARRY POTTER</label>
-        <input type="number" max="10" min="1" name="divide" placeholder="2 a 10">
+        <label for="">100 -Administradores Ponto Com</label>
+        <input type="number" max="10" min="0" name="qtd1" placeholder="0 a 10">
         <!-- <input type="text" name="item1"> -->
     </div>
     <div>
-        <label for="">200 - LIVRO 2</label>
-        <input type="number" max="10" min="1" name="divide" placeholder="2 a 10">
+        <label for="">200 - Os segredos das mentes</label>
+        <input type="number" max="10" min="0" name="qtd2" placeholder="0 a 10">
+        <!-- <input type="text" name="item2"> -->
+    </div>
+    <div>
+        <label for="">300 - Programação para Iniciantes</label>
+        <input type="number" max="10" min="0" name="qtd3" placeholder="0 a 10">
+        <!-- <input type="text" name="item2"> -->
+    </div>
+    <div>
+        <label for="">400 - Os cientistas de Hitler</label>
+        <input type="number" max="10" min="0" name="qtd4" placeholder="0 a 10">
+        <!-- <input type="text" name="item2"> -->
+    </div>
+    <div>
+        <label for="">500 - Quem pensa Enriquece</label>
+        <input type="number" max="10" min="0" name="qtd5" placeholder="0 a 10">
+        <!-- <input type="text" name="item2"> -->
+    </div>
+    <div>
+        <label for="">600 - Negócio Escalável</label>
+        <input type="number" max="10" min="0" name="qtd6" placeholder="0 a 10">
+        <!-- <input type="text" name="item2"> -->
+    </div>
+    <div>
+        <label for="">700 - Gestão Fácil</label>
+        <input type="number" max="10" min="0" name="qtd7" placeholder="0 a 10">
+        <!-- <input type="text" name="item2"> -->
+    </div>
+    <div>
+        <label for="">800 - Harry Poter</label>
+        <input type="number" max="10" min="0" name="qtd8" placeholder="0 a 10">
+        <!-- <input type="text" name="item2"> -->
+    </div>
+    <div>
+        <label for="">900 - O senhor dos Anéis</label>
+        <input type="number" max="10" min="0" name="qtd9" placeholder="0 a 10">
+        <!-- <input type="text" name="item2"> -->
+    </div>
+    <div>
+        <label for="">1000 - O Alienista</label>
+        <input type="number" max="10" min="0" name="qtd10" placeholder="0 a 10">
         <!-- <input type="text" name="item2"> -->
     </div>
 
-    <button type="submit">ENVIAR COMPRA</button>
+    <button type="submit">Adicionar ao carrinho</button>
 </form>
