@@ -13,7 +13,14 @@ $totalcodigo800 = 0;
 $totalcodigo900 = 0;
 $totalcodigo1000 = 0;
 
+$array = [];
+$array['qtd'][]= $_POST['qtd1'];
+$array['nomeLivro'][] = $_POST['livro1'];
+$array['qtd'][] = $_POST['qtd2'];
+$array['nomeLivro'][] = $_POST['livro2'];
 
+echo "<pre>";
+print_r($array);
 $codigo100 = $_POST['qtd1'];
 $codigo200 = $_POST['qtd2'];
 $codigo300 = $_POST['qtd3'];
@@ -24,6 +31,7 @@ $codigo700 = $_POST['qtd7'];
 $codigo800 = $_POST['qtd8'];
 $codigo900 = $_POST['qtd9'];
 $codigo1000 = $_POST['qtd10'];
+$nome100 = $_POST['livro1'];
 
 // echo "Quantidade: Administradores Ponto Com ($codigo100)";
 // echo "<br>";
@@ -48,7 +56,7 @@ $codigo1000 = $_POST['qtd10'];
 // echo "<br>";
 echo "<br>";
 if ($codigo100 >= 1) {
-    echo "Livro: Administradores Ponto Com, Quantidade $codigo100, Preço unitário R$70,00";
+    echo "Livro: $nome100 $codigo100, Preço unitário R$70,00";
     echo "<br>";
     $totalcodigo100 = $codigo100 * 70.00;
     echo "Total $codigo100 unidades R$$totalcodigo100,00";

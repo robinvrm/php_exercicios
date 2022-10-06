@@ -79,11 +79,13 @@ pix conta a partir do momento da compra. -->
     <div>
         <label for="">100 -Administradores Ponto Com</label>
         <input type="number" max="10" min="0" name="qtd1" placeholder="0 a 10">
+        <input type="text" name="livro1" value="Administradores Ponto Com">
         <!-- <input type="text" name="item1"> -->
     </div>
     <div>
         <label for="">200 - Os segredos das mentes</label>
         <input type="number" max="10" min="0" name="qtd2" placeholder="0 a 10">
+        <input type="text" name="livro2" value="Os segredos das mentes">
         <!-- <input type="text" name="item2"> -->
     </div>
     <div>
