@@ -1,5 +1,10 @@
 <?php
 
+$multa1 = 0;
+$multa2 = 0;
+$multa3 = 0;
+
+
 $valor1 = $_POST['valor1'];
 $valor2 = $_POST['valor2'];
 $valor3 = $_POST['valor3'];
@@ -90,7 +95,7 @@ if ($dias2 == 0) {
     $multa2 = ($dias2 * 1.50) + ($valor2 * 0.10 + $valor2);
     echo "$multa2";
     echo "<br>";
-    echo "$diass";
+    echo "$dias2";
 } elseif ($dias2 <= -7) {
     $desconto2 = $valor2 - (0.10 * $valor2);
     echo "$desconto2";
@@ -131,7 +136,10 @@ echo "<hr>";
 
 echo "Total boletos com juros";
 $somacj = $multa1 + $multa2 + $multa3;
+echo "<br>";
 print_r($somacj);
-if ($somacj > $somasj) {
-    echo "$somacj";
-}
+$jurosMulta =  $somasj - $somacj;
+// if ($somacj > $somasj) {
+//     echo "<br>";
+//     echo "$somacj";
+// }
